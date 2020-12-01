@@ -12,7 +12,7 @@ const mysql = require("mysql");
 let db;
 
 const startDB = () => {
-  db = mysql.createConnection(process.env.DATABASE);
+  db = mysql.createConnection(process.env.CLEARDB_DATABASE_URL);
 
   db.connect((err) => {
     if (err) {
